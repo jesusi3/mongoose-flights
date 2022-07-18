@@ -18,6 +18,6 @@ const flightSchema = new Schema({
     },
     departs: Date,
 
-})
+});
 
 module.exports = mongoose.model('Flight', flightSchema);

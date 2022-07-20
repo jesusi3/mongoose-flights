@@ -1,4 +1,4 @@
-<%- include("../partials/header")%>
+<%-  include("../partials/header") %>
 
 <h1>Flights List</h1>
 <table>
@@ -11,15 +11,16 @@
         </tr>
     </thead>
     <tbody>
-    <%=  Flight.forEach(function(f) {  %>
+    <%  flight.forEach(function(f) {  %>
         <tr>
             <td><%= f.airline %></td>
             <td><%= f.airport %></td>
-            <td><%= f.flghtNo %></td>
+            <td><%= f.flightNo %></td>
             <td><%= f.departs %></td>
+            <td><a href="/flights/<%= f.id %>">Details</a></td>
         </tr>
-    <%= }) %>
+    <% }) %>
     </tbody>
 </table>
 
-<%- include("../partials/footer")%>
+<%-  include("../partials/footer")%>

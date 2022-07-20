@@ -13,3 +13,11 @@ a {
   color: #00B7FF;
   font-size: x-large;
 }
+
+div > div {
+  display: inline-flex;
+} 
+
+.prt {
+  font-weight: bold;
+}

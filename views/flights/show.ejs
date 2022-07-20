@@ -1,0 +1,40 @@
+<%- include('../partials/header')%>
+<div class="prt">Airline:
+  <span><%=  flight.airline %></div>
+</div>
+<div class="prt">Airport:
+  <div><%=  flight.airport %></div>
+</div>
+<div class="prt">FlightNo:
+  <div><%=  flight.flightNo %></div>
+</div>
+<div class="prt">Departure:</div>
+<table>
+  <tbody>
+    <div><%=  flight.airport %>&nbsp;&nbsp;<%=  flight.departs %></div>
+    <% flight.destinations.forEach(function(d) {  %>
+      <tr><%= d.airport  %></tr>&nbsp;&nbsp;
+      <tr><%= d.arrivals %></tr>
+      <br>
+    <%  });  %>
+
+  </tbody>
+
+</table>
+<!-- new markup below -->
+<br><br><h2>Reviews</h2>
+<form id="add-review-form" method="POST"
+  action="/flights/<%= flight._id %>/destinations">
+  <label>Airport:</label>
+  <select name="airport">
+    <option value="AUS">AUS</option>
+    <option value="DFW">DFW</option>
+    <option value="DEN" selected>DEN</option>
+    <option value="LAX">LAX</option>
+    <option value="SAN">SAN</option>
+</select>
+  <label>Arrival:</label>
+    <input type="date" name="arrivals" >
+  <input type="submit" value="Add Destinations">
+</form>
+<%- include('../partials/footer')%>

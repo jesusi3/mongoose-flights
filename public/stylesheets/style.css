@@ -11,13 +11,18 @@ body {
 
 a {
   color: #00B7FF;
-  font-size: x-large;
+  font-size: xx-large;
+}
+#ticket-btn{
+  font-size: large;
 }
 
 div > div {
   display: inline-flex;
+  font-size: large;
 } 
 
 .prt {
   font-weight: bold;
+  font-size: x-large;
 }

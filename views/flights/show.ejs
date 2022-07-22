@@ -36,7 +36,7 @@
     <input type="datetime-local" name="arrivals" >
   <input type="submit" value="Add Destinations">
 </form>
-<button><a href="/flights/<%= flight._id %>/tickets/new">New Ticket</a></button>
+<button><a href="/flights/<%= flight._id %>/tickets/new" id="ticket-btn">New Ticket</a></button>
 <table>
   <tbody>
     <thead>
@@ -45,8 +45,9 @@
     </thead>
     <% tickets.forEach(function(t) {  %>
     <tr>
-      <tr><%= t.seat %></tr>&nbsp;&nbsp;
-      <tr><%= t.price %></tr>
+      <tr>
+        <td><%= t.seat %></td>
+        <td><%= t.price %></td>
       <br>
     </tr>
     <% }); %>
